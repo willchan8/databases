@@ -16,10 +16,10 @@ CREATE TABLE roomnames (
 
 CREATE TABLE messages (
   id INT NOT NULL, 
+  text TEXT, 
   username TEXT, 
   user_id INT,
   roomname_id INT,
-  message TEXT, 
   PRIMARY KEY (id),
   FOREIGN KEY (user_id) REFERENCES users(id),
   FOREIGN KEY (roomname_id) REFERENCES roomnames(id)
